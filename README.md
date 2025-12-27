@@ -38,17 +38,17 @@ Ability to debug real production issues
 
 System-level thinking, not just CRUD
 
-🏗️ Overall Architecture
-React Frontend (Vite / Nginx)
+🏗️ System Architecture (High-Level)
+
+Client (React SPA)
         |
-        | HTTP (JSON)
+        | REST APIs (JSON)
         v
-Spring Boot Backend (REST APIs)
+Spring Boot Backend
         |
-        | JPA / Hibernate
+        | ORM (JPA / Hibernate)
         v
 MySQL Database
-
 
 All services can run:
 
@@ -121,6 +121,17 @@ university-management/
 ├── docker-compose.yml
 └── README.md
 
+
+📂 Codebase Structure (Backend)
+
+com.university.management
+├── controller    → REST API layer
+├── service       → Business logic
+├── repository    → Data access (JPA)
+├── entity        → Database models
+├── security      → JWT, filters, config
+└── config        → Cross-cutting concerns
+
 🔐 Authentication & Security Design
 Authentication Flow
 
@@ -191,6 +202,15 @@ Frontend	http://localhost:3000
 Backend	http://localhost:8081
 
 Swagger	http://localhost:8081/swagger-ui
+
+
+This enables:
+
+API exploration
+
+Contract validation
+
+Interview demonstrations
 🧪 Running Locally (Without Docker)
 Backend
 cd backend
@@ -200,6 +220,21 @@ Frontend
 cd frontend
 npm install
 npm run dev
+
+Containers
+Service	Description
+Backend	Spring Boot API
+Frontend	React + Nginx
+Database	MySQL
+
+
+Start Everything
+docker compose up -d --build
+
+
+
+
+
 
 ⚙️ Configuration Strategy
 
