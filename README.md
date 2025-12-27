@@ -250,23 +250,7 @@ Docker
 
 Cloud (AWS / Railway / Render)
 
-🧑‍💼 Interview Talking Points (VERY IMPORTANT)
 
-You should be able to explain:
-
-Why JWT over session-based auth
-
-Difference between access & refresh tokens
-
-How Spring Security filters work
-
-Why Docker is used
-
-How database schema supports scalability
-
-How you would deploy this in production
-
-Tradeoffs you made and why
 
 🚀 Future Enhancements (Optional)
 
